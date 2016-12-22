@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+  <PropertyGroup>
+    <ProjectGuid>2d38272e-5e48-4ade-9321-c73952613e70</ProjectGuid>
+    <AssemblyName>System.IO.Pipelines.Networking.Windows.RIO</AssemblyName>
+    <RootNamespace>System.IO.Pipelines.Networking.Windows.RIO</RootNamespace>
+    <Description>Networking implementation of pipelines based on Windows RIO</Description>
+    <Copyright>Microsoft Corporation, All rights reserved</Copyright>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <TargetFrameworks>net46;netstandard1.3</TargetFrameworks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <PackageTags></PackageTags>
+    <PackageReleaseNotes>Pre-release package, for testing only</PackageReleaseNotes>
+    <PackageIconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/dotnet/corefxlab</PackageProjectUrl>
+    <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CLSCompliant>False</CLSCompliant>
+  </PropertyGroup>
+  <!-- Default configurations to help VS understand the configurations -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <!-- Folder list -->
+  <ItemGroup>
+    <Folder Include="Internal\" />
+    <Folder Include="Internal\Winsock\" />
+  </ItemGroup>
+  <!-- .cs list -->
+  <ItemGroup>
+    <Compile Include="RioTcpConnection.cs" />
+    <Compile Include="RioTcpServer.cs" />
+    <Compile Include="Internal\CpuInfo.cs" />
+    <Compile Include="Internal\RioBufferSegment.cs" />
+    <Compile Include="Internal\RioRequestResult.cs" />
+    <Compile Include="Internal\RioThread.cs" />
+    <Compile Include="Internal\RioThreadPool.cs" />
+    <Compile Include="Internal\Winsock\AddressFamilies.cs" />
+    <Compile Include="Internal\Winsock\Ipv4InternetAddress.cs" />
+    <Compile Include="Internal\Winsock\NotificationCompletion.cs" />
+    <Compile Include="Internal\Winsock\NotificationCompletionEvent.cs" />
+    <Compile Include="Internal\Winsock\NotificationCompletionIocp.cs" />
+    <Compile Include="Internal\Winsock\NotificationCompletionType.cs" />
+    <Compile Include="Internal\Winsock\Protocol.cs" />
+    <Compile Include="Internal\Winsock\RegisteredIO.cs" />
+    <Compile Include="Internal\Winsock\RioDelegates.cs" />
+    <Compile Include="Internal\Winsock\RioExtensionFunctionTable.cs" />
+    <Compile Include="Internal\Winsock\RIOImports.cs" />
+    <Compile Include="Internal\Winsock\RioReceiveFlags.cs" />
+    <Compile Include="Internal\Winsock\RioSendFlags.cs" />
+    <Compile Include="Internal\Winsock\SocketAddress.cs" />
+    <Compile Include="Internal\Winsock\SocketFlags.cs" />
+    <Compile Include="Internal\Winsock\SocketType.cs" />
+    <Compile Include="Internal\Winsock\SuppressUnmanagedCodeSecurityAttribute.cs" />
+    <Compile Include="Internal\Winsock\Version.cs" />
+    <Compile Include="Internal\Winsock\WindowsSocketsData.cs" />
+  </ItemGroup>
+  <!-- .resx list -->
+  <ItemGroup>
+
+  </ItemGroup>
+  <!-- ref list -->
+  <ItemGroup>
+
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <!-- Project references -->
+  <ItemGroup>
+    <ProjectReference Include="..\System.IO.Pipelines\System.IO.Pipelines.csproj" />
+    <ProjectReference Include="..\System.Slices\System.Slices.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--<PackageReference Include="Microsoft.NET.Sdk">
+      <Version>1.0.0-alpha-20161104-2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>-->
+    <PackageReference Include="NETStandard.Library">
+      <Version>1.6.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <!-- TargetFramework-specific dependencies -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <PackageReference Include="System.Threading.Thread">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Overlapped">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.ThreadPool">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.Process">
+      <Version>4.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
+</Project>

@@ -263,7 +263,11 @@ namespace System.IO.Pipelines
 
             var sb = new StringBuilder();
             Span<byte> span = Segment.Memory.Span.Slice(Index, Segment.End - Index);
-            SpanExtensions.AppendAsLiteral(span, sb);
+            for (int i = 0; i < span.Length; i++)
+            {
+                sb.Append((char)span[i]);
+            }
+
             return sb.ToString();
         }
 

@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace System.Drawing.Graphics
 {
+    #pragma warning disable BCL0015
     internal class DLLImports
     {
         const int gdMaxColors = 256;
@@ -229,4 +230,5 @@ namespace System.Drawing.Graphics
 
 
     }
+    #pragma warning restore BCL0015
 }

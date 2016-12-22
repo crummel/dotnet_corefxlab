@@ -11,7 +11,7 @@
     "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },
   "buildOptions": {
-    "keyFile": "../../tools/test_key.snk"
+    "keyFile": "../../signing/test_key.snk"
   },
   "frameworks": {
     "netcoreapp1.0": {

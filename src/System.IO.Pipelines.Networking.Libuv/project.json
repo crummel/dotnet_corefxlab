@@ -11,19 +11,27 @@
   },
   "buildOptions": {
     "allowUnsafe": true,
-    "keyFile": "../../tools/Key.snk"
+    "keyFile": "../../signing/Key.snk"
   },
 
   "dependencies": {
     "System.IO.Pipelines": {
       "target": "project"
     },
+    "System.Slices": {
+      "target": "project"
+    },
     "Libuv": "1.9.0"
   },
 
   "frameworks": {
-    "net451": {},
+    "net46": {},
     "netstandard1.3": {
+      "dependencies": {
+        "System.Threading.Thread": "4.3.0"
+      }
+    },
+    "netcoreapp1.0": {
       "dependencies": {
         "System.Threading.Thread": "4.3.0"
       }

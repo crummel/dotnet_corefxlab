@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+  <PropertyGroup>
+    <ProjectGuid>a712ae2e-c98e-4e83-9b33-789141763541</ProjectGuid>
+    <AssemblyName>System.IO.Pipelines</AssemblyName>
+    <RootNamespace>System.IO.Pipelines</RootNamespace>
+    <Description>An abstraction for doing efficient asynchronous IO</Description>
+    <Copyright>Microsoft Corporation, All rights reserved</Copyright>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <TargetFrameworks>netstandard1.3;net46</TargetFrameworks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <PackageTags></PackageTags>
+    <PackageReleaseNotes>Pre-release package, for testing only</PackageReleaseNotes>
+    <PackageIconUrl>http://go.microsoft.com/fwlink/?linkid=833199</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/dotnet/corefxlab</PackageProjectUrl>
+    <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CLSCompliant>False</CLSCompliant>
+  </PropertyGroup>
+  <!-- Default configurations to help VS understand the configurations -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <!-- Folder list -->
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <!-- .cs list -->
+  <ItemGroup>
+    <Compile Include="ArrayBufferPool.cs" />
+    <Compile Include="BufferSegment.cs" />
+    <Compile Include="CommonVectors.cs" />
+    <Compile Include="DefaultReadableBufferExtensions.cs" />
+    <Compile Include="DefaultWritableBufferExtensions.cs" />
+    <Compile Include="Gate.cs" />
+    <Compile Include="IBufferPool.cs" />
+    <Compile Include="IPipelineConnection.cs" />
+    <Compile Include="IPipelineReader.cs" />
+    <Compile Include="IPipelineWriter.cs" />
+    <Compile Include="IReadableBufferAwaiter.cs" />
+    <Compile Include="MemoryEnumerator.cs" />
+    <Compile Include="MemoryPool.cs" />
+    <Compile Include="MemoryPoolBlock.cs" />
+    <Compile Include="MemoryPoolSlab.cs" />
+    <Compile Include="Pipe.cs" />
+    <Compile Include="PipelineConnectionExtensions.cs" />
+    <Compile Include="PipelineConnectionStream.cs" />
+    <Compile Include="PipelineFactory.cs" />
+    <Compile Include="PipelineReader.cs" />
+    <Compile Include="PipelineWriter.cs" />
+    <Compile Include="PreservedBuffer.cs" />
+    <Compile Include="ReadableBuffer.cs" />
+    <Compile Include="ReadableBufferAwaitable.cs" />
+    <Compile Include="ReadableBufferReader.cs" />
+    <Compile Include="ReadCursor.cs" />
+    <Compile Include="ReadResult.cs" />
+    <Compile Include="StreamExtensions.cs" />
+    <Compile Include="StreamPipelineConnection.cs" />
+    <Compile Include="TaskToApm.cs" />
+    <Compile Include="ThrowHelper.cs" />
+    <Compile Include="UnownedBuffer.cs" />
+    <Compile Include="UnownedBufferReader.cs" />
+    <Compile Include="WritableBuffer.cs" />
+    <Compile Include="WriteableBufferStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <!-- .resx list -->
+  <ItemGroup>
+  <!--  <TargetingPackReference Include="mscorlib"  Condition="'$(TargetGroup)' == 'net451'" />
+    <TargetingPackReference Include="System.Private.CoreLib" Condition="'$(TargetGroup)' == 'netstandard1.3'" />-->
+
+  </ItemGroup>
+  <!-- ref list -->
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <!-- Project references -->
+  <ItemGroup>
+    <ProjectReference Include="..\System.Slices\System.Slices.csproj" />
+    <ProjectReference Include="..\System.Binary\System.Binary.csproj" />
+    <ProjectReference Include="..\System.Collections.Sequences\System.Collections.Sequences.csproj" />    
+  </ItemGroup>
+  <ItemGroup>
+    <!--<PackageReference Include="Microsoft.NET.Sdk">
+      <Version>1.0.0-alpha-20161104-2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>-->
+    <PackageReference Include="NETStandard.Library">
+      <Version>1.6.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <!-- TargetFramework-specific dependencies -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <PackageReference Include="Microsoft.TargetingPack.NETFramework.v4.5.1">
+      <Version>1.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
+</Project>

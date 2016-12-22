@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+  <PropertyGroup>
+    <ProjectGuid>12d7b81d-26fd-4bca-9d72-afdea900baac</ProjectGuid>
+    <AssemblyName>System.Reflection.Metadata.Cil</AssemblyName>
+    <RootNamespace>System.Reflection.Metadata.Cil</RootNamespace>
+    <Description>.NET Core Metadata Reader</Description>
+    <Copyright>Microsoft Corporation, All rights reserved</Copyright>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <TargetFrameworks>netstandard1.5</TargetFrameworks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <PackageTags>.NET metadata reader corefxlab</PackageTags>
+    <PackageReleaseNotes>Pre-release package, for testing only</PackageReleaseNotes>
+    <PackageIconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/dotnet/corefxlab</PackageProjectUrl>
+    <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <CLSCompliant>False</CLSCompliant>
+  </PropertyGroup>
+  <!-- Default configurations to help VS understand the configurations -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <!-- Folder list -->
+  <ItemGroup>
+    <Folder Include="Decoder\" />
+    <Folder Include="Instructions\" />
+    <Folder Include="Visitor\" />
+  </ItemGroup>
+  <!-- .cs list -->
+  <ItemGroup>
+    <Compile Include="CilAssembly.cs" />
+    <Compile Include="CilAssemblyReference.cs" />
+    <Compile Include="CilConstant.cs" />
+    <Compile Include="CilCustomAttribute.cs" />
+    <Compile Include="CilEntity.cs" />
+    <Compile Include="CilEventDefinition.cs" />
+    <Compile Include="CilExceptionRegion.cs" />
+    <Compile Include="CilField.cs" />
+    <Compile Include="CilHeaderOptions.cs" />
+    <Compile Include="CilLocal.cs" />
+    <Compile Include="CilMethodDefinition.cs" />
+    <Compile Include="CilMethodImport.cs" />
+    <Compile Include="CilModuleDefinition.cs" />
+    <Compile Include="CilModuleReference.cs" />
+    <Compile Include="CilParameter.cs" />
+    <Compile Include="CilProperty.cs" />
+    <Compile Include="CilReaders.cs" />
+    <Compile Include="CilTypeDefinition.cs" />
+    <Compile Include="CilTypeLayout.cs" />
+    <Compile Include="CilTypeReference.cs" />
+    <Compile Include="CilTypeSpecification.cs" />
+    <Compile Include="SignatureDecoder.cs" />
+    <Compile Include="Decoder\CilDecoder.cs" />
+    <Compile Include="Decoder\CilHelpers.cs" />
+    <Compile Include="Decoder\CILInstructionSize.cs" />
+    <Compile Include="Decoder\CILTokenType.cs" />
+    <Compile Include="Decoder\CilType.cs" />
+    <Compile Include="Decoder\CilTypeProvider.cs" />
+    <Compile Include="Instructions\CilBranchInstruction.cs" />
+    <Compile Include="Instructions\CilByteInstruction.cs" />
+    <Compile Include="Instructions\CilDoubleInstruction.cs" />
+    <Compile Include="Instructions\CilInstruction.cs" />
+    <Compile Include="Instructions\CilInstructionWithNoValue.cs" />
+    <Compile Include="Instructions\CilInstructionWithValue.cs" />
+    <Compile Include="Instructions\CilInt16BranchInstruction.cs" />
+    <Compile Include="Instructions\CilInt16VariableInstruction.cs" />
+    <Compile Include="Instructions\CilInt32Instruction.cs" />
+    <Compile Include="Instructions\CilInt64Instruction.cs" />
+    <Compile Include="Instructions\CilNumericValueInstruction.cs" />
+    <Compile Include="Instructions\CilSingleInstruction.cs" />
+    <Compile Include="Instructions\CilStringInstruction.cs" />
+    <Compile Include="Instructions\CilSwitchInstruction.cs" />
+    <Compile Include="Instructions\CilVariableInstruction.cs" />
+    <Compile Include="Visitor\CilToStringVisitor.cs" />
+    <Compile Include="Visitor\CilVisitorOptions.cs" />
+    <Compile Include="Visitor\ICilVisitable.cs" />
+    <Compile Include="Visitor\ICilVisitor.cs" />
+  </ItemGroup>
+  <!-- .resx list -->
+  <ItemGroup>
+
+  </ItemGroup>
+  <!-- ref list -->
+  <ItemGroup>
+    <Reference Include="NETStandard.Library" />
+    <Reference Include="System.Collections.Immutable" />
+    <Reference Include="System.Reflection.Metadata" />
+    <Reference Include="System.Reflection.TypeExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <!-- Project references -->
+  <ItemGroup>
+    
+  </ItemGroup>
+  <ItemGroup>
+    <!--<PackageReference Include="Microsoft.NET.Sdk">
+      <Version>1.0.0-alpha-20161104-2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>-->
+    <PackageReference Include="NETStandard.Library">
+      <Version>1.6.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <!-- TargetFramework-specific dependencies -->
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
+</Project>

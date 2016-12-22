@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace System.IO.FileSystem
 {
+    #pragma warning disable BCL0015    
     class DllImports
     {
         internal static IntPtr INVALID_HANDLE_VALUE = new IntPtr(-1);
@@ -25,6 +26,7 @@ namespace System.IO.FileSystem
         [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
         public static unsafe extern IntPtr FindFirstFileExW(string lpFileName, FINDEX_INFO_LEVELS fInfoLevelId, void* lpFindFileData, FINDEX_SEARCH_OPS fSearchOp, IntPtr lpSearchFilter, int dwAdditionalFlags);
     }
+    #pragma warning disable BCL0015
 
     enum FINDEX_INFO_LEVELS
     {

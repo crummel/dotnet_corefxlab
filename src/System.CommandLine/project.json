@@ -17,7 +17,7 @@
     "requireLicenseAcceptance": true
   },
   "buildOptions": {
-    "keyFile": "../../tools/Key.snk",
+    "keyFile": "../../signing/Key.snk",
     "embed": {
       "include": "System/Strings.resx",
       "mappings": {
@@ -34,6 +34,11 @@
         "System.Runtime.Extensions": "4.1.0"
       }
     },
-    "net45": {}
+    "net45": {},
+    "netcoreapp1.0": {
+      "dependencies": {
+        "System.Runtime.Extensions": "4.1.0"
+      }
+    }
   }
 }

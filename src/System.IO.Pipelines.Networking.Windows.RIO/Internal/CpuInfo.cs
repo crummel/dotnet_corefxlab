@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace System.IO.Pipelines.Networking.Windows.RIO.Internal
 {
+    #pragma warning disable BCL0015
     public static class CpuInfo
     {
         const string Kernel_32 = "Kernel32";
@@ -269,4 +270,5 @@ namespace System.IO.Pipelines.Networking.Windows.RIO.Internal
         [DllImport(Kernel_32, SetLastError = true)]
         private static extern long GetLastError();
     }
+    #pragma warning restore BCL0015
 }

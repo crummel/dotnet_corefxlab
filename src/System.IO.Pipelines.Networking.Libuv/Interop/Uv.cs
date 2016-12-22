@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace System.IO.Pipelines.Networking.Libuv.Interop
 {
+    #pragma warning disable BCL0015
     public class Uv
     {
         public Uv()
@@ -635,4 +636,5 @@ namespace System.IO.Pipelines.Networking.Libuv.Interop
             public static extern int WSAGetLastError();
         }
     }
+    #pragma warning restore BCL0015
 }

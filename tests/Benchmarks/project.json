@@ -2,7 +2,7 @@
   "name": "Benchmarks",
   "buildOptions": {
     "allowUnsafe": true,
-    "keyFile": "../../tools/test_key.snk"
+    "keyFile": "../../signing/test_key.snk"
   },
   "dependencies": {
     "Microsoft.NETCore.App": {

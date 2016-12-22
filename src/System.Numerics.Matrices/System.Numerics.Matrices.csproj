@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+  <PropertyGroup>
+    <ProjectGuid>56a91e9d-dbb1-4b83-8e29-868452eb86af</ProjectGuid>
+    <AssemblyName>System.Numerics.Matrices</AssemblyName>
+    <RootNamespace>System.Numerics.Matrices</RootNamespace>
+    <Description>Manipulation of Matrices</Description>
+    <Copyright>Microsoft Corporation, All rights reserved</Copyright>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <TargetFrameworks>netstandard1.1</TargetFrameworks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <PackageTags>.NET matrix matrices corefxlab</PackageTags>
+    <PackageReleaseNotes>Pre-release package, for testing only</PackageReleaseNotes>
+    <PackageIconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/dotnet/corefxlab</PackageProjectUrl>
+    <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CLSCompliant>False</CLSCompliant>
+  </PropertyGroup>
+  <!-- Default configurations to help VS understand the configurations -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <!-- Folder list -->
+  <ItemGroup>
+    <Folder Include="System\Numerics\" />
+  </ItemGroup>
+  <!-- .cs list -->
+  <ItemGroup>
+    <Compile Include="System\Numerics\IMatrix.cs" />
+    <Compile Include="System\Numerics\Matrix1x2.cs" />
+    <Compile Include="System\Numerics\Matrix1x3.cs" />
+    <Compile Include="System\Numerics\Matrix1x4.cs" />
+    <Compile Include="System\Numerics\Matrix2x1.cs" />
+    <Compile Include="System\Numerics\Matrix2x2.cs" />
+    <Compile Include="System\Numerics\Matrix2x3.cs" />
+    <Compile Include="System\Numerics\Matrix2x4.cs" />
+    <Compile Include="System\Numerics\Matrix3x1.cs" />
+    <Compile Include="System\Numerics\Matrix3x2.cs" />
+    <Compile Include="System\Numerics\Matrix3x3.cs" />
+    <Compile Include="System\Numerics\Matrix3x4.cs" />
+    <Compile Include="System\Numerics\Matrix4x1.cs" />
+    <Compile Include="System\Numerics\Matrix4x2.cs" />
+    <Compile Include="System\Numerics\Matrix4x3.cs" />
+    <Compile Include="System\Numerics\Matrix4x4.cs" />
+    <Compile Include="System\Numerics\MatrixHelper.cs" />
+  </ItemGroup>
+  <!-- .resx list -->
+  <ItemGroup>
+
+  </ItemGroup>
+  <!-- ref list -->
+  <ItemGroup>
+    <Reference Include="NETStandard.Library" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <!-- Project references -->
+  <ItemGroup>
+    
+  </ItemGroup>
+  <ItemGroup>
+    <!--<PackageReference Include="Microsoft.NET.Sdk">
+      <Version>1.0.0-alpha-20161104-2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>-->
+    <PackageReference Include="NETStandard.Library">
+      <Version>1.6.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <!-- TargetFramework-specific dependencies -->
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
+</Project>
