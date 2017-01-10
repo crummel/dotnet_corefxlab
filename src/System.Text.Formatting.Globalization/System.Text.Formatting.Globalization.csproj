@@ -26,7 +26,6 @@
   <ItemGroup>
     <ProjectReference Include="..\System.Slices\System.Slices.csproj" />
     <ProjectReference Include="..\System.Text.Formatting\System.Text.Formatting.csproj" />
-    <ProjectReference Include="..\System.Text.Primitives\System.Text.Primitives.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
