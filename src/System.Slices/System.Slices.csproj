@@ -16,7 +16,8 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="System/*.cs" />
+    <Compile Include="System/**/*.cs" />
+    <Compile Exclude="tools/**/*.cs" />
     <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
   <ItemGroup>
