@@ -9,4 +9,12 @@
   <ItemGroup>
     <PackageReference Include="NETStandard.Library" Version="1.6" />
   </ItemGroup>
+  <!-- Project references -->
+  <ItemGroup>
+    <ProjectReference Include="..\System.Slices\System.Slices.csproj" />
+    <ProjectReference Include="..\System.Text.Primitives\System.Text.Primitives.csproj" />
+    <ProjectReference Include="..\System.Buffers.Experimental\System.Buffers.Experimental.csproj" />
+    <ProjectReference Include="..\System.Collections.Sequences\System.Collections.Sequences.csproj" />
+
+  </ItemGroup>
 </Project>
