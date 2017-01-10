@@ -7,7 +7,6 @@
     <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NETStandard.Library" Version="1.6" />
     <PackageReference Include="System.Collections" Version="4.0.11" />
     <PackageReference Include="System.Diagnostics.Debug" Version="4.0.11" />
     <PackageReference Include="System.Diagnostics.Tools" Version="4.0.1" />
