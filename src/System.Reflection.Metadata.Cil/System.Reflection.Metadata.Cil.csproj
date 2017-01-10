@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.5</TargetFramework>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <Description>.NET Core Metadata Reader</Description>
     <Copyright>Microsoft Corporation, All rights reserved</Copyright>

@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard1.5;net45;netcoreapp1.0</TargetFrameworks>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <Description>CLI commandline command parsing</Description>
     <Copyright>Microsoft Corporation, All rights reserved</Copyright>

@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <Description>Manipulation of Matrices</Description>
     <Copyright>Microsoft Corporation, All rights reserved</Copyright>

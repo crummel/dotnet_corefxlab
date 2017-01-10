@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <Description>Non-allocating HTTP parser</Description>
     <Copyright>Microsoft Corporation, All rights reserved</Copyright>

@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFrameworks>net46;netstandard1.3;netcoreapp1.0</TargetFrameworks>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <Description>Networking implementation of pipelines based on Windows RIO</Description>
     <Copyright>Microsoft Corporation, All rights reserved</Copyright>

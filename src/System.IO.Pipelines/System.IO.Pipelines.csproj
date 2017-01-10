@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFrameworks>net46;netcoreapp1.0;netstandard1.3</TargetFrameworks>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <Description>An abstraction for doing efficient asynchronous IO</Description>
     <Copyright>Microsoft Corporation, All rights reserved</Copyright>
