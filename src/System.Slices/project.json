@@ -20,7 +20,7 @@
     "allowUnsafe": true,
     "keyFile": "../../signing/Key.snk",
     "compile": {
-      "include": [ "System/*.cs" ],
+      "include": [ "System/**/*.cs" ],
       "exclude": [ "tools/**/*.cs" ]
     }
   },
