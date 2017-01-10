@@ -7,7 +7,6 @@ using System.Runtime.InteropServices;
 
 namespace System.IO.Pipelines.Networking.Windows.RIO.Internal.Winsock
 {
-    #pragma warning disable BCL0015
     public static class RioImports
     {
         const string Ws232 = "WS2_32.dll";
@@ -149,5 +148,4 @@ namespace System.IO.Pipelines.Networking.Windows.RIO.Internal.Winsock
         public const int SocketError = -1;
         public const int InvalidSocket = -1;
     }
-    #pragma warning restore BCL0015
 }

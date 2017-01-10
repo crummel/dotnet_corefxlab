@@ -2,7 +2,6 @@
 
 namespace System.Net.Libuv
 {
-    #pragma warning disable BCL0015
     // This is roughly based on LibuvSharp
     static class UVInterop
     {
@@ -127,7 +126,6 @@ namespace System.Net.Libuv
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         internal delegate void handle_callback(IntPtr req, int status);
     }
-    #pragma warning restore BCL0015
 
     [StructLayout(LayoutKind.Sequential, Size = 16)]
     struct sockaddr_in

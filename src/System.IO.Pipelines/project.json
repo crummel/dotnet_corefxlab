@@ -32,8 +32,7 @@
   },
 
   "frameworks": {
-    "net46": { },
-    "netcoreapp1.0": {},
-    "netstandard1.3" : {}
+    "net451": {},
+    "netstandard1.3": {}
   }
 }

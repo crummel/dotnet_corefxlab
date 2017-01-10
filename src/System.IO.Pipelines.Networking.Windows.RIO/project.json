@@ -17,23 +17,12 @@
   "dependencies": {
     "System.IO.Pipelines": {
       "target": "project"
-    },
-    "System.Slices": {
-      "target": "project"
     }
   },
 
   "frameworks": {
-    "net46": {},
+    "net451": {},
     "netstandard1.3": {
-      "dependencies": {
-        "System.Threading.Thread": "4.3.0",
-        "System.Threading.Overlapped": "4.3.0",
-        "System.Threading.ThreadPool": "4.3.0",
-        "System.Diagnostics.Process": "4.3.0"
-      }
-    },
-    "netcoreapp1.0": {
       "dependencies": {
         "System.Threading.Thread": "4.3.0",
         "System.Threading.Overlapped": "4.3.0",

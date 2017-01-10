@@ -6,7 +6,6 @@ using System.Runtime.InteropServices;
 
 namespace System.IO.Pipelines.Compression
 {
-    #pragma warning disable BCL0015
     internal static partial class Interop
     {
         internal static class Libraries
@@ -125,5 +124,4 @@ namespace System.IO.Pipelines.Compression
             }
         }
     }
-    #pragma warning restore BCL0015
 }

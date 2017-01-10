@@ -17,20 +17,12 @@
   "dependencies": {
     "System.IO.Pipelines": {
       "target": "project"
-    },
-    "System.Slices": {
-      "target": "project"
     }
   },
 
   "frameworks": {
-    "net46": {},
+    "net451": {},
     "netstandard1.3": {
-      "dependencies": {
-        "System.Threading.ThreadPool": "4.3.0"
-      }
-    },
-    "netcoreapp1.0": {
       "dependencies": {
         "System.Threading.ThreadPool": "4.3.0"
       }

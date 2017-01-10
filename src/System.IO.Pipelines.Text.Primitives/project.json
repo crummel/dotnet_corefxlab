@@ -23,18 +23,11 @@
     },
     "System.IO.Pipelines": {
       "target": "project"
-    },
-    "System.Slices": {
-      "target": "project"
-    },
-    "System.Collections.Sequences": {
-      "target": "project"
     }
   },
 
   "frameworks": {
-    "net46": {},
-    "netstandard1.3": {},
-    "netcoreapp1.0": {}
+    "net451": {},
+    "netstandard1.3": {}
   }
 }

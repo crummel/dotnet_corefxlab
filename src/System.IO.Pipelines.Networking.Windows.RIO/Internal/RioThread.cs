@@ -10,7 +10,6 @@ using System.IO.Pipelines.Networking.Windows.RIO.Internal.Winsock;
 
 namespace System.IO.Pipelines.Networking.Windows.RIO.Internal
 {
-    #pragma warning disable BCL0015
     internal unsafe class RioThread
     {
         const int maxResults = 1024;
@@ -536,5 +535,4 @@ namespace System.IO.Pipelines.Networking.Windows.RIO.Internal
             }
         }
     }
-    #pragma warning restore BCL0015
 }

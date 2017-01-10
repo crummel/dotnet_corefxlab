@@ -10,7 +10,6 @@ using Microsoft.Win32.SafeHandles;
 
 namespace System.IO.Pipelines.File
 {
-    #pragma warning disable BCL0015
     public class FileReader : PipelineReader
     {
         public FileReader(MemoryPool pool) : base(pool)
@@ -187,5 +186,4 @@ namespace System.IO.Pipelines.File
             FirstPipeInstance = 0x00080000
         }
     }
-    #pragma warning restore BCL0015
 }

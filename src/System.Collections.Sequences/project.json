@@ -25,7 +25,6 @@
   },
   "frameworks": {
     "netstandard1.1": {
-    },
-    "netcoreapp1.0": {}
+    }
   }
 }
