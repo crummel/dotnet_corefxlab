@@ -1,115 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <ProjectGuid>80e6332b-dc83-4dfc-9c19-8d89e988ba4e</ProjectGuid>
-    <AssemblyName>System.Text.Primitives</AssemblyName>
-    <RootNamespace>System.Text.Primitives</RootNamespace>
-    <Description>Low-level methods and architecture for .NET text handling</Description>
-    <Copyright>Microsoft Corporation, All rights reserved</Copyright>
-    <VersionPrefix>0.1.0</VersionPrefix>
-    <TargetFrameworks>netstandard1.1</TargetFrameworks>
-    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageTags>.NET formatting corefxlab</PackageTags>
-    <PackageReleaseNotes>Pre-release package, for testing only</PackageReleaseNotes>
-    <PackageIconUrl>http://go.microsoft.com/fwlink/?linkid=833199</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/dotnet/corefxlab</PackageProjectUrl>
-    <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <CLSCompliant>False</CLSCompliant>
+    <TargetFramework>netstandard1.1</TargetFramework>
   </PropertyGroup>
-  <!-- Default configurations to help VS understand the configurations -->
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-  </PropertyGroup>
-  <!-- Folder list -->
   <ItemGroup>
-    <Folder Include="System\" />
-    <Folder Include="System\Text\" />
-    <Folder Include="System\Text\Encoding\" />
-    <Folder Include="System\Text\Formatting\" />
-    <Folder Include="System\Text\Parsing\" />
-    <Folder Include="System\Text\Encoding\Internal\" />
-    <Folder Include="System\Text\Encoding\Utf16\" />
-    <Folder Include="System\Text\Encoding\Utf8\" />
-    <Folder Include="System\Text\Parsing\Internal\" />
-  </ItemGroup>
-  <!-- .cs list -->
-  <ItemGroup>
-    <Compile Include="System\Precondition.cs" />
-    <Compile Include="System\Text\EncodingData.cs" />
-    <Compile Include="System\Text\TextEncoding.cs" />
-    <Compile Include="System\Text\TextFormat.cs" />
-    <Compile Include="System\Text\Encoding\UnicodeCodePoint.cs" />
-    <Compile Include="System\Text\Encoding\Internal\UnicodeConstants.cs" />
-    <Compile Include="System\Text\Encoding\Utf16\Utf16LittleEndianCodePointEnumerable.cs" />
-    <Compile Include="System\Text\Encoding\Utf16\Utf16LittleEndianCodePointEnumerator.cs" />
-    <Compile Include="System\Text\Encoding\Utf16\Utf16LittleEndianEncoder.cs" />
-    <Compile Include="System\Text\Encoding\Utf8\Utf16LittleEndianStringExtensions.cs" />
-    <Compile Include="System\Text\Encoding\Utf8\Utf8CodeUnit.cs" />
-    <Compile Include="System\Text\Encoding\Utf8\Utf8EncodedCodePoint.cs" />
-    <Compile Include="System\Text\Encoding\Utf8\Utf8Encoder.cs" />
-    <Compile Include="System\Text\Encoding\Utf8\Utf8String.CodePointEnumerable.cs" />
-    <Compile Include="System\Text\Encoding\Utf8\Utf8String.CodePointEnumerator.cs" />
-    <Compile Include="System\Text\Encoding\Utf8\Utf8String.CodePointReverseEnumerator.cs" />
-    <Compile Include="System\Text\Encoding\Utf8\Utf8String.cs" />
-    <Compile Include="System\Text\Encoding\Utf8\Utf8String.Enumerator.cs" />
-    <Compile Include="System\Text\Formatting\FloatFormatter.cs" />
-    <Compile Include="System\Text\Formatting\IBufferFormattable.cs" />
-    <Compile Include="System\Text\Formatting\IntegerFormatter.cs" />
-    <Compile Include="System\Text\Formatting\PrimitiveFormatter.cs" />
-    <Compile Include="System\Text\Formatting\PrimitiveFormatter_float.cs" />
-    <Compile Include="System\Text\Formatting\PrimitiveFormatter_time.cs" />
-    <Compile Include="System\Text\Formatting\PrimitiveFormatter_uuid.cs" />
-    <Compile Include="System\Text\Parsing\InvariantBool.cs" />
-    <Compile Include="System\Text\Parsing\InvariantSigned.cs" />
-    <Compile Include="System\Text\Parsing\InvariantSignedHex.cs" />
-    <Compile Include="System\Text\Parsing\InvariantUnsigned.cs" />
-    <Compile Include="System\Text\Parsing\InvariantUnsignedHex.cs" />
-    <Compile Include="System\Text\Parsing\InvariantUtf16_decimal.cs" />
-    <Compile Include="System\Text\Parsing\InvariantUtf8_decimal.cs" />
-    <Compile Include="System\Text\Parsing\PrimitiveParser.cs" />
-    <Compile Include="System\Text\Parsing\PrimitiveParser_Boolean.cs" />
-    <Compile Include="System\Text\Parsing\PrimitiveParser_Decimal.cs" />
-    <Compile Include="System\Text\Parsing\Internal\PrimitiveParser_bool.cs" />
-    <Compile Include="System\Text\Parsing\Internal\PrimitiveParser_decimal.cs" />
-    <Compile Include="System\Text\Parsing\Internal\PrimitiveParser_double.cs" />
-    <Compile Include="System\Text\Parsing\Internal\PrimitiveParser_float.cs" />
-    <Compile Include="System\Text\Parsing\Internal\PrimitiveParser_signed.cs" />
-    <Compile Include="System\Text\Parsing\Internal\PrimitiveParser_uint.cs" />
-    <Compile Include="System\Text\Parsing\Internal\PrimitiveParser_ulong.cs" />
-    <Compile Include="System\Text\Parsing\Internal\PrimitiveParser_unsigned.cs" />
-    <Compile Include="System\Text\Parsing\Internal\PrimitiveParser_uri.cs" />
-  </ItemGroup>
-  <!-- .resx list -->
-  <ItemGroup>
-
-  </ItemGroup>
-  <!-- ref list -->
-  <ItemGroup>
-    <Reference Include="System.Buffers" />
+    <Compile Include="**\*.cs" />
+    <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="project.json" />
+    <PackageReference Include="NETStandard.Library" Version="1.6" />
   </ItemGroup>
-  <!-- Project references -->
-  <ItemGroup>
-    <ProjectReference Include="..\System.Slices\System.Slices.csproj" />    
-  </ItemGroup>
-  <ItemGroup>
-    <!--<PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>-->
-    <PackageReference Include="NETStandard.Library">
-      <Version>1.6.0</Version>
-    </PackageReference>
-  </ItemGroup>
-  <!-- TargetFramework-specific dependencies -->
-
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

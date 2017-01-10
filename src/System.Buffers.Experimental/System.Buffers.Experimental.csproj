@@ -1,72 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <ProjectGuid>60e282cb-156b-4a5e-9c7d-4e174ea2e024</ProjectGuid>
-    <AssemblyName>System.Buffers.Experimental</AssemblyName>
-    <RootNamespace>System.Buffers.Experimental</RootNamespace>
-    <Description>Pool of unmanaged Span&lt;byte&gt; values</Description>
-    <Copyright>Microsoft Corporation, All rights reserved</Copyright>
-    <VersionPrefix>0.1.0</VersionPrefix>
-    <TargetFrameworks>netstandard1.1</TargetFrameworks>
-    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageTags>Span Spans Pool corefxlab</PackageTags>
-    <PackageReleaseNotes>Pre-release package, for testing only</PackageReleaseNotes>
-    <PackageIconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/dotnet/corefxlab</PackageProjectUrl>
-    <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <CLSCompliant>False</CLSCompliant>
+    <TargetFramework>netstandard1.1</TargetFramework>
   </PropertyGroup>
-  <!-- Default configurations to help VS understand the configurations -->
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-  </PropertyGroup>
-  <!-- Folder list -->
   <ItemGroup>
-    <Folder Include="System\Buffers\" />
-  </ItemGroup>
-  <!-- .cs list -->
-  <ItemGroup>
-    <Compile Include="System\Buffers\ArraySegmentExtensions.cs" />
-    <Compile Include="System\Buffers\BufferPool.cs" />
-    <Compile Include="System\Buffers\BufferUtilities.cs" />
-    <Compile Include="System\Buffers\ManagedBufferPool.cs" />
-    <Compile Include="System\Buffers\NativeBufferPool.cs" />
-    <Compile Include="System\Buffers\OwnedMemory.cs" />
-    <Compile Include="System\Buffers\ThrowHelper.cs" />
-  </ItemGroup>
-  <!-- .resx list -->
-  <ItemGroup>
-
-  </ItemGroup>
-  <!-- ref list -->
-  <ItemGroup>
-    <Reference Include="System.Buffers" />
+    <Compile Include="**\*.cs" />
+    <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="project.json" />
+    <PackageReference Include="NETStandard.Library" Version="1.6" />
   </ItemGroup>
-  <!-- Project references -->
-  <ItemGroup>
-    <ProjectReference Include="..\System.Collections.Sequences\System.Collections.Sequences.csproj" />
-    <ProjectReference Include="..\System.Slices\System.Slices.csproj" />
-    <ProjectReference Include="..\System.Text.Primitives\System.Text.Primitives.csproj" />    
-  </ItemGroup>
-  <ItemGroup>
-    <!--<PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>-->
-    <PackageReference Include="NETStandard.Library">
-      <Version>1.6.0</Version>
-    </PackageReference>
-  </ItemGroup>
-  <!-- TargetFramework-specific dependencies -->
-
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

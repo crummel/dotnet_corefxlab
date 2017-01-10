@@ -1,69 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <ProjectGuid>329b9be5-3f34-42a2-9e8c-d7bdd6b1ee55</ProjectGuid>
-    <AssemblyName>System.Numerics.Dec64</AssemblyName>
-    <RootNamespace>System.Numerics</RootNamespace>
-    <Description>64 bit decimal floating point value</Description>
-    <Copyright>Microsoft Corporation, All rights reserved</Copyright>
-    <VersionPrefix>0.1.0</VersionPrefix>
-    <TargetFrameworks>netstandard1.0</TargetFrameworks>
-    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageTags>.NET 64 bit decimal floating point value</PackageTags>
-    <PackageReleaseNotes>Pre-release package, for testing only</PackageReleaseNotes>
-    <PackageIconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/dotnet/corefxlab</PackageProjectUrl>
-    <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
-    <CLSCompliant>False</CLSCompliant>
+    <TargetFramework>netstandard1.0</TargetFramework>
   </PropertyGroup>
-  <!-- Default configurations to help VS understand the configurations -->
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-  </PropertyGroup>
-  <!-- Folder list -->
   <ItemGroup>
-    <Folder Include="System\Numerics\" />
-  </ItemGroup>
-  <!-- .cs list -->
-  <ItemGroup>
-    <Compile Include="System\Numerics\Dec64.Comparable.cs" />
-    <Compile Include="System\Numerics\Dec64.cs" />
-    <Compile Include="System\Numerics\Dec64.Formattable.cs" />
-    <Compile Include="System\Numerics\Dec64.Maths.cs" />
-    <Compile Include="System\Numerics\Dec64.Operators.cs" />
-  </ItemGroup>
-  <!-- .resx list -->
-  <ItemGroup>
-
-  </ItemGroup>
-  <!-- ref list -->
-  <ItemGroup>
-    <Reference Include="System.Runtime" />
-    <Reference Include="System.Diagnostics.Debug" />
+    <Compile Include="**\*.cs" />
+    <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="project.json" />
+    <PackageReference Include="NETStandard.Library" Version="1.6" />
   </ItemGroup>
-  <!-- Project references -->
-  <ItemGroup>
-    
-  </ItemGroup>
-  <ItemGroup>
-    <!--<PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>-->
-    <PackageReference Include="NETStandard.Library">
-      <Version>1.6.0</Version>
-    </PackageReference>
-  </ItemGroup>
-  <!-- TargetFramework-specific dependencies -->
-
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

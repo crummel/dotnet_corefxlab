@@ -1,66 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <ProjectGuid>7e8ac800-7d57-4645-83f5-fa101090d648</ProjectGuid>
-    <AssemblyName>System.IO.Pipelines.File</AssemblyName>
-    <RootNamespace>System.IO.Pipelines.File</RootNamespace>
-    <Description>File I/O pipeline implementation</Description>
-    <Copyright>Microsoft Corporation, All rights reserved</Copyright>
-    <VersionPrefix>0.1.0</VersionPrefix>
-    <TargetFrameworks>netstandard1.3;net46</TargetFrameworks>
-    <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageTags></PackageTags>
-    <PackageReleaseNotes>Pre-release package, for testing only</PackageReleaseNotes>
-    <PackageIconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/dotnet/corefxlab</PackageProjectUrl>
-    <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <CLSCompliant>False</CLSCompliant>
+    <TargetFramework>netstandard1.3;net46;netcoreapp1.0</TargetFramework>
   </PropertyGroup>
-  <!-- Default configurations to help VS understand the configurations -->
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-  </PropertyGroup>
-  <!-- Folder list -->
   <ItemGroup>
-
-  </ItemGroup>
-  <!-- .cs list -->
-  <ItemGroup>
-    <Compile Include="FileReader.cs" />
-    <Compile Include="ReadableFilePipelineFactoryExtensions.cs" />
-  </ItemGroup>
-  <!-- .resx list -->
-  <ItemGroup>
-
-  </ItemGroup>
-  <!-- ref list -->
-  <ItemGroup>
-    <Reference Include="System.Threading.Overlapped" />
+    <Compile Include="**\*.cs" />
+    <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="project.json" />
+    <PackageReference Include="NETStandard.Library" Version="1.6" />
   </ItemGroup>
-  <!-- Project references -->
-  <ItemGroup>
-    <ProjectReference Include="..\System.IO.Pipelines\System.IO.Pipelines.csproj" />
-    <ProjectReference Include="..\System.Slices\System.Slices.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <!--<PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>-->
-    <PackageReference Include="NETStandard.Library">
-      <Version>1.6.0</Version>
-    </PackageReference>
-  </ItemGroup>
-  <!-- TargetFramework-specific dependencies -->
-
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
