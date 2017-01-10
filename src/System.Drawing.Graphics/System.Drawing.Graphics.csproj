@@ -19,8 +19,6 @@
     <Compile Include="Properties/*.cs" />
     <Compile Include="System/Drawing/Graphics/*.cs" />
     <Compile Include="System/Drawing/Graphics/Interop/Windows/*.cs" />
-    <Compile Exclude="System/Drawing/graphics/Interop/Linux/*.cs" />
-    <Compile Exclude="System/Drawing/graphics/Interop/OSX/*.cs" />
     <EmbeddedResource Include="Properties/Strings.resx" />
   </ItemGroup>
   <ItemGroup>

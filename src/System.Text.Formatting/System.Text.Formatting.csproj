@@ -18,7 +18,6 @@
   <ItemGroup>
     <Compile Include="System/**/*.cs" />
     <Compile Include="Properties/**/*.cs" />
-    <Compile Exclude="GenerateCompatibilityTests/**/*.cs" />
     <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
   <ItemGroup>
