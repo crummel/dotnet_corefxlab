@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TargetFrameworks>net46;netstandard1.3;netcoreapp1.0</TargetFrameworks>
   </PropertyGroup>
@@ -8,6 +8,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NETStandard.Library" Version="1.6" />
+
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
@@ -16,6 +17,5 @@
     <ProjectReference Include="..\System.IO.Pipelines\System.IO.Pipelines.csproj" />
     <ProjectReference Include="..\System.Slices\System.Slices.csproj" />
     <ProjectReference Include="..\System.Collections.Sequences\System.Collections.Sequences.csproj" />
-
   </ItemGroup>
 </Project>
