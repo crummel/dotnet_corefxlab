@@ -20,11 +20,12 @@
     <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="System.Memory" Version="4.4.0-*" />
+
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
     <ProjectReference Include="..\System.IO.Pipelines\System.IO.Pipelines.csproj" />
+    <ProjectReference Include="..\System.Slices\System.Slices.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
