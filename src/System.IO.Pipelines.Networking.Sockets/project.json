@@ -17,6 +17,9 @@
   "dependencies": {
     "System.IO.Pipelines": {
       "target": "project"
+    },
+    "System.Slices": {
+      "target": "project"
     }
   },
 
