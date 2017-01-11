@@ -18,7 +18,9 @@
     "System.IO.Pipelines": {
       "target": "project"
     },
-    "System.Memory": "4.4.0-*"
+    "System.Slices": {
+      "target": "project"
+    }
   },
 
   "frameworks": {
