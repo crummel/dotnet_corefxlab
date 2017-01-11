@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.0</TargetFramework>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	<!-- Skip buildtools signing since we have our own key -->
+	<SkipSigning>True</SkipSigning>
     <AssemblyOriginatorKeyFile>../../signing/test_key.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
