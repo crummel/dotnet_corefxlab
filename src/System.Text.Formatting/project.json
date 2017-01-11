@@ -33,7 +33,8 @@
   "dependencies": {
     "System.Slices": { "target": "project" },
     "System.Text.Primitives": { "target": "project" },
-    "System.Buffers.Experimental": { "target": "project" }
+    "System.Buffers.Experimental": { "target": "project" },
+    "System.Collections.Sequences": { "target": "project" }
   },
   "frameworks": {
     "netstandard1.1": {
