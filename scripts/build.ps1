@@ -2,14 +2,14 @@
     [string]$Configuration="Debug",
     [string]$Restore="true",
     [string]$Channel="preview",
-    [string]$Version="1.0.0-preview2-003121"
+    [string]$Version="1.0.0-preview2-1-003182"
 )
 
 Write-Host "Commencing full build for Configuration=$Configuration."
 
 if (!(Test-Path "dotnet\dotnet.exe")) {
     Write-Host "dotnet.exe not installed, downloading and installing."
-    Invoke-Expression -Command "$PSScriptRoot\install-dotnet.ps1 -Channel $Channel -Version $Version -InstallDir $PSScriptRoot\..\dotnet"
+    Invoke-Expression -Command "$PSScriptRoot\install-dotnet.ps1 -DryRun -Channel $Channel -Version $Version -InstallDir $PSScriptRoot\..\dotnet"
     if ($lastexitcode -ne $null -and $lastexitcode -ne 0) {
         Write-Error "Failed to install dotnet.exe, exit code [$lastexitcode], aborting build."
         exit -1
