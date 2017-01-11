@@ -27,6 +27,11 @@
       "dependencies": {
         "System.Threading.Thread": "4.3.0"
       }
+    },
+    "netcoreapp1.0": {
+      "dependencies": {
+        "System.Threading.Thread": "4.3.0"
+      }
     }
   }
 }
