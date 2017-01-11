@@ -26,6 +26,7 @@
   "dependencies": {
     "System.Text.Formatting": { "target": "project" },
     "System.Text.Primitives": { "target": "project" },
+    "System.Buffers.Experimental": { "target": "project" },
     "System.Slices": { "target": "project" },
     "System.Text.Json": { "target": "project" },
     "System.Dynamic.Runtime": "4.3.0"
