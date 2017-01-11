@@ -27,11 +27,11 @@
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
-    <ProjectReference Include="..\System.Text.Json.Dynamic\System.Text.Json.Dynamic.csproj" />
-    <ProjectReference Include="..\System.Text.Formatting\System.Text.Formatting.csproj" />
-    <ProjectReference Include="..\System.Text.Primitives\System.Text.Primitives.csproj" />
-    <ProjectReference Include="..\System.Slices\System.Slices.csproj" />
-    <ProjectReference Include="..\System.Text.Json\System.Text.Json.csproj" />
+    <ProjectReference Include="..\..\src\System.Text.Json.Dynamic\System.Text.Json.Dynamic.csproj" />
+    <ProjectReference Include="..\..\src\System.Text.Formatting\System.Text.Formatting.csproj" />
+    <ProjectReference Include="..\..\src\System.Text.Primitives\System.Text.Primitives.csproj" />
+    <ProjectReference Include="..\..\src\System.Slices\System.Slices.csproj" />
+    <ProjectReference Include="..\..\src\System.Text.Json\System.Text.Json.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

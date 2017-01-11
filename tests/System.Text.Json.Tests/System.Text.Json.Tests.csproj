@@ -27,8 +27,8 @@
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
-    <ProjectReference Include="..\System.Text.Json\System.Text.Json.csproj" />
-    <ProjectReference Include="..\System.Text.Json.Dynamic\System.Text.Json.Dynamic.csproj" />
+    <ProjectReference Include="..\..\src\System.Text.Json\System.Text.Json.csproj" />
+    <ProjectReference Include="..\..\src\System.Text.Json.Dynamic\System.Text.Json.Dynamic.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

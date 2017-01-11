@@ -27,7 +27,7 @@
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
-    <ProjectReference Include="..\System.Net.Libuv\System.Net.Libuv.csproj" />
+    <ProjectReference Include="..\..\src\System.Net.Libuv\System.Net.Libuv.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

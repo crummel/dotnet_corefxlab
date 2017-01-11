@@ -29,7 +29,7 @@
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
-    <ProjectReference Include="..\System.IO.FileSystem.Watcher.Polling\System.IO.FileSystem.Watcher.Polling.csproj" />
+    <ProjectReference Include="..\..\src\System.IO.FileSystem.Watcher.Polling\System.IO.FileSystem.Watcher.Polling.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

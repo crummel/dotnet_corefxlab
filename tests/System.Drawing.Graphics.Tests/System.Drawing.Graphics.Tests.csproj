@@ -28,7 +28,7 @@
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
-    <ProjectReference Include="..\System.Drawing.Graphics\System.Drawing.Graphics.csproj" />
+    <ProjectReference Include="..\..\src\System.Drawing.Graphics\System.Drawing.Graphics.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

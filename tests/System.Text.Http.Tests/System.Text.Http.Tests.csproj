@@ -27,7 +27,7 @@
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
-    <ProjectReference Include="..\System.Text.Http\System.Text.Http.csproj" />
+    <ProjectReference Include="..\..\src\System.Text.Http\System.Text.Http.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

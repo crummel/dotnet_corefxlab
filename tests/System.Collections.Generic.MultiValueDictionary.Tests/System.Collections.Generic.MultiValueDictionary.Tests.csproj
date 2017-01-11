@@ -26,7 +26,7 @@
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
-    <ProjectReference Include="..\System.Collections.Generic.MultiValueDictionary\System.Collections.Generic.MultiValueDictionary.csproj" />
+    <ProjectReference Include="..\..\src\System.Collections.Generic.MultiValueDictionary\System.Collections.Generic.MultiValueDictionary.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

@@ -27,7 +27,7 @@
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
-    <ProjectReference Include="..\System.Threading.Tasks.Channels\System.Threading.Tasks.Channels.csproj" />
+    <ProjectReference Include="..\..\src\System.Threading.Tasks.Channels\System.Threading.Tasks.Channels.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
