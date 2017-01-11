@@ -1,7 +1,7 @@
 @for /r %%a in (src\*.xproj) do @move %%~fa %%~dpna.xproj.old > NUL
 call init-tools.cmd
 for /r %%a in (System*.csproj) do (
-  msbuild %%a
+  msbuild %%a /fl "/flp:v=diag;logfile=%%~n.log"
   if errorlevel 1 (
     echo %%a failed
     exit /b
