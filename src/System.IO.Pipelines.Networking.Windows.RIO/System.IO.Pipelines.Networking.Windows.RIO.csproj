@@ -20,7 +20,7 @@
     <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
   <ItemGroup>
-
+    <PackageReference Include="System.Memory" Version="4.4.0-*" />
   </ItemGroup>
   <!-- Project references -->
   <ItemGroup>
