@@ -18,6 +18,9 @@
     "System.IO.Pipelines": {
       "target": "project"
     },
+    "System.Slices": {
+      "target": "project"
+    },
     "System.Threading.Overlapped": "4.3.0"
   },
 
