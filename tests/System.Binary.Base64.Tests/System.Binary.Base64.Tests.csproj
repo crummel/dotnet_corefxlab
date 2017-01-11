@@ -30,6 +30,7 @@
     <ProjectReference Include="..\..\src\System.Binary\System.Binary.csproj" />
     <ProjectReference Include="..\..\src\System.Binary.Base64\System.Binary.Base64.csproj" />
     <ProjectReference Include="..\..\src\System.Text.Primitives\System.Text.Primitives.csproj" />
+    <ProjectReference Include="..\..\src\System.Slices\System.Slices.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
