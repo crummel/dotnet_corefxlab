@@ -26,6 +26,11 @@
       "dependencies": {
         "System.Threading.ThreadPool": "4.3.0"
       }
+    },
+    "netcoreapp1.0": {
+      "dependencies": {
+        "System.Threading.ThreadPool": "4.3.0"
+      }
     }
   }
 }
