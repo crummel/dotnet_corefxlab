@@ -23,7 +23,7 @@
 
 
   "frameworks": {
-    "netstandard1.1": {},
+    "netstandard1.3": {},
     "net46": {},
     "netcoreapp1.0": {}
   }
