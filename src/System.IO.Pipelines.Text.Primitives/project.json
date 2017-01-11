@@ -26,6 +26,9 @@
     },
     "System.Slices": {
       "target": "project"
+    },
+    "System.Collections.Sequences": {
+      "target": "project"
     }
   },
 
