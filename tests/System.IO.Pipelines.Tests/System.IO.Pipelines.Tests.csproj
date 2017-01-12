@@ -32,8 +32,9 @@
     <ProjectReference Include="..\..\src\System.IO.Pipelines.Networking.Sockets\System.IO.Pipelines.Networking.Sockets.csproj" />
     <ProjectReference Include="..\..\src\System.IO.Pipelines.Networking.Libuv\System.IO.Pipelines.Networking.Libuv.csproj" />
     <ProjectReference Include="..\..\src\System.IO.Pipelines.Networking.Windows.RIO\System.IO.Pipelines.Networking.Windows.RIO.csproj" />
-    <ProjectReference Include="..\..\src\System.Collections.Sequences\System.Collections.Sequences.csproj" />
     <ProjectReference Include="..\..\src\System.Text.Formatting\System.Text.Formatting.csproj" />
+    <ProjectReference Include="..\..\src\System.Slices\System.Slices.csproj" />
+    <ProjectReference Include="..\..\src\System.Collections.Sequences\System.Collections.Sequences.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
