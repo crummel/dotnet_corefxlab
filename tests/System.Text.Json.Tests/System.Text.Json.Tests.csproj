@@ -34,6 +34,7 @@
     <ProjectReference Include="..\..\src\System.Text.Formatting\System.Text.Formatting.csproj" />
     <ProjectReference Include="..\..\src\System.Text.Json.Dynamic\System.Text.Json.Dynamic.csproj" />
     <ProjectReference Include="..\..\src\System.Slices\System.Slices.csproj" />
+    <ProjectReference Include="..\..\src\System.Buffers.Experimental\System.Buffers.Experimental.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
