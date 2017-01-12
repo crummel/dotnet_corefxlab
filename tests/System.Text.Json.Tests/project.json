@@ -20,7 +20,8 @@
     "System.Text.Json": { "target": "project" },
     "System.Text.Primitives": { "target": "project" },
     "System.Text.Formatting": { "target": "project" },
-    "System.Text.Json.Dynamic": { "target": "project" }
+    "System.Text.Json.Dynamic": { "target": "project" },
+    "System.Slices": { "target": "project" }
   },
   "frameworks": {
     "netcoreapp1.0": {
