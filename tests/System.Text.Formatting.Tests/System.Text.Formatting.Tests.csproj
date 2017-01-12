@@ -31,6 +31,8 @@
     <ProjectReference Include="..\..\src\System.Text.Formatting\System.Text.Formatting.csproj" />
     <ProjectReference Include="..\..\src\System.Text.Primitives\System.Text.Primitives.csproj" />
     <ProjectReference Include="..\..\src\System.Buffers.Experimental\System.Buffers.Experimental.csproj" />
+    <ProjectReference Include="..\..\src\System.Collections.Sequences\System.Collections.Sequences.csproj" />
+    <ProjectReference Include="..\..\src\System.Slices\System.Slices.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
