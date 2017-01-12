@@ -16,6 +16,7 @@
     <PackageProjectUrl></PackageProjectUrl>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <NoWarn>CS8002</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**\*.cs" />
