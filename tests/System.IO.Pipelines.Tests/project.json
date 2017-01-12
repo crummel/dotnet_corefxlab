@@ -1,7 +1,7 @@
 {
   "buildOptions": {
     "warningsAsErrors": true,
-    "keyFile": "../../signing/Key.snk",
+    "keyFile": "../../signing/test_key.snk",
     "allowUnsafe": true
   },
   "dependencies": {
