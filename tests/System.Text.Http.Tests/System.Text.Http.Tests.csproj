@@ -30,6 +30,8 @@
   <!-- Project references -->
   <ItemGroup>
     <ProjectReference Include="..\..\src\System.Text.Http\System.Text.Http.csproj" />
+    <ProjectReference Include="..\..\src\System.Text.Formatting\System.Text.Formatting.csproj" />
+    <ProjectReference Include="..\..\src\System.Text.Primitives\System.Text.Primitives.csproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
