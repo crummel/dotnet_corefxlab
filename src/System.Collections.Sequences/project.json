@@ -18,13 +18,13 @@
   },
   "buildOptions": {
     "allowUnsafe": true,
-    "keyFile": "../../tools/Key.snk"
+    "keyFile": "../../signing/Key.snk"
   },
   "dependencies": {
     "System.Slices": { "target": "project" }
   },
   "frameworks": {
     "netstandard1.1": {},
-	"netcoreapp1.2": {}
+    "netcoreapp1.2": {}
   }
 }

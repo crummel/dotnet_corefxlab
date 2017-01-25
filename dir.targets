@@ -41,7 +41,7 @@
     <_TargetFrameworkDirectories>$(MSBuildThisFileDirectory)/Documentation</_TargetFrameworkDirectories>
     <_FullFrameworkReferenceAssemblyPaths>$(MSBuildThisFileDirectory)/Documentation</_FullFrameworkReferenceAssemblyPaths>
   </PropertyGroup>
-  
+
   <PropertyGroup>
     <!-- We do not want to target a portable profile.
          TODO: Make this the default in buildtools so this is not necessary. -->

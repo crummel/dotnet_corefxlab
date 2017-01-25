@@ -44,7 +44,6 @@
   "frameworks": {
     "net451": {},
     "netstandard1.3": {},
-    "netcoreapp1.0": {},
     "netcoreapp1.2": {}
   }
 }

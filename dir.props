@@ -1,12 +1,12 @@
 ﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Condition="Exists('..\dir.props') And '$(RepoLocalBuild)'!='true'" Project="..\dir.props" />
-  
+
   <!--
     $(OS) is set to Unix/Windows_NT. This comes from an environment variable on Windows and MSBuild on Unix.
   -->
   <PropertyGroup>
     <OsEnvironment Condition="'$(OsEnvironment)'==''">$(OS)</OsEnvironment>
-	<DisableImplicitFrameworkReferences>True</DisableImplicitFrameworkReferences>
+    <DisableImplicitFrameworkReferences>True</DisableImplicitFrameworkReferences>
   </PropertyGroup>
 
   <!--
@@ -24,13 +24,13 @@
     <Configuration Condition="'$(Configuration)'==''">$(__BuildType)</Configuration>
   </PropertyGroup>
 
-  <!-- 
+  <!--
   Projects that have no OS-specific implementations just use Debug and Release for $(Configuration).
   Projects that do have OS-specific implementations use OS_Debug and OS_Release, for all OS's we support even
   if the code is the same between some OS's (so if you have some project that just calls POSIX APIs, we still have
   OSX_[Debug|Release] and Linux_[Debug|Release] configurations.  We do this so that we place all the output under
   a single binary folder and can have a similar experience between the command line and Visual Studio.
-  
+
   Since now have multiple *Debug and *Release configurations, ConfigurationGroup is set to Debug for any of the
   debug configurations, and to Release for any of the release configurations.
   -->
@@ -63,7 +63,7 @@
   <PropertyGroup>
     <ProjectDir>$(MSBuildThisFileDirectory)</ProjectDir>
     <SourceDir>$(ProjectDir)src/</SourceDir>
-	<LanguageTargets>$(ProjectDir)empty.targets</LanguageTargets>
+    <LanguageTargets>$(ProjectDir)empty.targets</LanguageTargets>
 
     <!-- Output directories -->
     <BinDir Condition="'$(BinDir)'==''">$(ProjectDir)bin/</BinDir>
@@ -102,7 +102,7 @@
 
     <!-- Folder where we will drop the Nuget package for the toolchain -->
     <ProductPackageDir Condition="'$(ProductPackageDir)'==''">$(BaseOutputPath)$(OSPlatformConfig)/packaging/</ProductPackageDir>
-    
+
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'==''">$(ObjDir)</BaseIntermediateOutputPath>
     <IntermediateOutputRootPath Condition="'$(IntermediateOutputRootPath)' == ''">$(BaseIntermediateOutputPath)$(OSPlatformConfig)\</IntermediateOutputRootPath>
     <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">$(IntermediateOutputRootPath)$(MSBuildProjectName)\</IntermediateOutputPath>
