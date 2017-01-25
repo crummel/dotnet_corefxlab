@@ -15,8 +15,8 @@
     "xunit.performance.core": "1.0.0-alpha-build0043"
   },
   "frameworks": {
-    "netcoreapp1.0": {
-    }
+    "netcoreapp1.0": {},
+    "netcoreapp1.2": {}
   },
   "testRunner": "xunit"
 }

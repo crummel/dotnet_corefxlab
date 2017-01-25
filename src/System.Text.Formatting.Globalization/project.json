@@ -30,7 +30,7 @@
     "System.Text.Formatting": { "target": "project" }
   },
   "frameworks": {
-    "netstandard1.1": {
-    }
+    "netstandard1.1": {},
+    "netcoreapp1.2": {}
   }
 }

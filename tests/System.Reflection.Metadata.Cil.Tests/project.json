@@ -10,8 +10,8 @@
     "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },
   "frameworks": {
-    "netcoreapp1.0": {
-    }
+    "netcoreapp1.0": {},
+    "netcoreapp1.2": {}
   },
   "buildOptions": {
     "embed": {

@@ -17,7 +17,7 @@
     "requireLicenseAcceptance": true
   },
   "buildOptions": {
-    "keyFile": "../../tools/Key.snk",
+    "keyFile": "../../signing/Key.snk",
     "embed": {
       "include": "Properties/Strings.resx",
       "mappings": {
@@ -26,19 +26,7 @@
     }
   },
   "frameworks": {
-    "netstandard1.3": {
-      "dependencies": {
-        "System.Diagnostics.Contracts": "4.0.1",
-        "System.Diagnostics.Debug": "4.0.11",
-        "System.Resources.ResourceManager": "4.0.1",
-        "System.Text.RegularExpressions": "4.1.0",
-        "System.Xml.ReaderWriter": "4.0.11"
-      }
-    },
-    "net45": {
-      "frameworkAssemblies": {
-        "System.Xml" : "4.0.0.0"
-      }
-    }
+    "netstandard1.3": {},
+    "netcoreapp1.2": {}
   }
 }

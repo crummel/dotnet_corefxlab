@@ -29,7 +29,7 @@
     "System.Threading.Timer": "4.0.1"
   },
   "frameworks": {
-    "netstandard1.3": {
-    }
+    "netstandard1.3": {},
+    "netcoreapp1.2": {}
   }
 }

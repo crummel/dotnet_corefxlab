@@ -24,8 +24,8 @@
     "System.Text.Json": { "target": "project" }
   },
   "frameworks": {
-    "netcoreapp1.0": {
-    }
+    "netcoreapp1.0": {},
+	"netcoreapp1.2": {}
   },
   "testRunner": "xunit"
 }

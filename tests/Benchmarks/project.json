@@ -12,15 +12,17 @@
     "xunit": "2.2.0-beta2-build3300",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "xunit.performance.core": "1.0.0-alpha-build0043",
+    "System.Buffers.Experimental": { "target": "project" },
     "System.IO.Pipelines": { "target": "project" },
+    "System.Slices": { "target": "project" },
     "System.Text.Primitives": { "target": "project" },
     "System.Text.Formatting": { "target": "project" },
     "System.Text.Http": { "target": "project" },
     "System.Text.Json": { "target": "project" }
   },
   "frameworks": {
-    "netcoreapp1.0": {
-    }
+    "netcoreapp1.0": {},
+	"netcoreapp1.2": {}
   },
   "testRunner": "xunit"
 }
