@@ -1,7 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>7e8ac800-7d57-4645-83f5-fa101090d648</ProjectGuid>
+  </PropertyGroup>
   <PropertyGroup>
     <TargetFrameworks>netstandard1.3;net46</TargetFrameworks>
+	<TargetFrameworkMoniker>netstandard1.3</TargetFrameworkMoniker>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <AssemblyOriginatorKeyFile>../../signing/Key.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
