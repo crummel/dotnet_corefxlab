@@ -20,7 +20,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.App" Version="1.1.0" />
     <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.1.1" />
-    <PackageReference Include="System.Globalization.Calendars" Version="4.0.1" />
+    <PackageReference Include="System.Globalization.Calendars" Version="4.3.0" />
     <PackageReference Include="System.Runtime.Serialization.Xml" Version="4.1.1" />
     <PackageReference Include="System.Xml.XmlSerializer" Version="4.0.11" />
     <PackageReference Include="xunit" Version="2.2.0-beta2-build3300" />

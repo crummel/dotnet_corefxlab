@@ -21,7 +21,7 @@
     "keyFile": "../../signing/Key.snk"
   },
   "dependencies": {
-    "NETStandard.Library": "1.6.0"
+    "NETStandard.Library": "1.6.1"
   },
   "frameworks": {
     "netstandard1.1": {},

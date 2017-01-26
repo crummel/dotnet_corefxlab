@@ -24,9 +24,9 @@
     }
   },  
   "dependencies": {
-    "NETStandard.Library": "1.6.0",
+    "NETStandard.Library": "1.6.1",
     "System.Diagnostics.TraceSource": "4.0.0",
-    "System.Threading.Timer": "4.0.1"
+    "System.Threading.Timer": "4.3.0"
   },
   "frameworks": {
     "netstandard1.3": {},

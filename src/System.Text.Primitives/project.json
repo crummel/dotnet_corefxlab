@@ -25,7 +25,7 @@
     }
   },
   "dependencies": {
-    "NETStandard.Library": "1.6.0",
+    "NETStandard.Library": "1.6.1",
     "System.Memory": "4.4.0-*",
     "System.Slices": { "target": "project" }
   },
